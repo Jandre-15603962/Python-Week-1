@@ -8,7 +8,7 @@ def sms(sms_text):
     if sms_text.isalpha():
         """If block checks to see if
             letters are alphabetical and kicks out any punctuation."""
-        print sms_text
+        #print sms_text
         return sms_text
     elif sms_text == " ":
         return " "
