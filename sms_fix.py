@@ -81,12 +81,12 @@ def compare(a,b):
             counter3 += 1
             counter += 1
 
-    print counter, counter2, counter3
+    #print counter, counter2, counter3
     answer = str(counter2/float(counter) * 100)+'%'
     return answer
-print compare(dic_line,re_list),'comparison'
+print compare(dic_line,re_list),'accuracy'
 
-print len(dic_line),len(re_list)
+#print len(dic_line),len(re_list)
 
 
 
