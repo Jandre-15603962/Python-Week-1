@@ -47,7 +47,7 @@ for i in end_file:
 
 dictionary_sms = dic_sms.split()                # Converts string into list for dictionary use           
 final_dict = {}                                 # Empty dictionary
-insert = map(lambda k, v: final_dict.update({k: v}), dictionary_sms, dic_line) #Takes values from two list and updates empty dictionary
+insert = map(lambda k, v: final_dict.update({k: v}), dictionary_sms, dic_line)  #Takes values from two list and updates empty dictionary
                                                                                 # The first value of the first list becomes the index of the 
                                                                                 # second list's first value. Creates a dictionary w/o repitition
 

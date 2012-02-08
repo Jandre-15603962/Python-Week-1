@@ -17,7 +17,7 @@ double_char_ob = re.compile(r'([a-z])\1+')          # Removes double characters
 punctuation_ob = re.compile(r'[^a-zA-Z0-9\s]')      # Removes punctuation
 
                        
-replace= replace_ob.sub('',sms_text)  # Only replaces vowels that have not-word-boundry, or vowels completely inside a word.
+replace= replace_ob.sub('',sms_text)                # Only replaces vowels that have not-word-boundry, or vowels completely inside a word.
 
 
 
@@ -31,7 +31,7 @@ and then entire found portion is replaced with a single
 occurrence of the found letter."""
 #print double_char +'\n'
 
-punctuation = punctuation_ob.sub('',double_char)        # Substitutes punctuation with empty string
+punctuation = punctuation_ob.sub('',double_char)    # Substitutes punctuation with empty string
 #print punctuation
 
 end = punctuation.split()
@@ -41,4 +41,5 @@ for i in end:
     sms_opt.write(''.join(i)+' ')                   # Writes output to file
 
 elapsed = (time.clock() - start)
+print elapsed
 sms_opt.write(str(elapsed))
