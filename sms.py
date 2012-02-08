@@ -2,7 +2,7 @@
 import re, time
 start = time.clock()
 sms_text = ""
-file_in = open('pg76.txt')
+file_in = open('doc1.txt')
 
 def sms(sms_text):
     if sms_text.isalpha():

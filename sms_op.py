@@ -2,7 +2,7 @@
 import time, re
 start = time.clock()
 
-file_in = open('pg76.txt')
+file_in = open('doc1.txt')
 
 #!"#$%&()*+,-./:;<=>?@[\]^_`{|}~
 #^a-zA-Z0-9-\s
