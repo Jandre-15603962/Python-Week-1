@@ -1,3 +1,5 @@
+# Unoptimzed
+
 import re, time
 start = time.clock()
 input_file = open('doc1.txt')

@@ -1,4 +1,4 @@
-# Unoptimized
+# Optimized
 
 import re, time
 

@@ -1,4 +1,4 @@
-# Optimized
+# Fixed and commented
 import time, re, os
 start = time.clock()
 
