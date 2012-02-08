@@ -13,15 +13,15 @@ def sms(a_string):
     punctuation_ob = re.compile(r'[^a-zA-Z0-9\s]')
     lower_str = ""
     for i in a_string:
-        lower_str += i.lower()                 # Passes each character through sms() one by one and also makes it lower case
+        lower_str += i.lower()                  # Passes each character through sms() one by one and also makes it lower case
     #print lower_str +"\n"
-
-    replace= replace_ob.sub('',lower_str)  # Only replaces vowels that have not-word-boundry, or vowels completely inside a word.
+    punctuation = punctuation_ob.sub('',lower_str)
+    replace= replace_ob.sub('',punctuation)       # Only replaces vowels that have not-word-boundry, or vowels completely inside a word.
     #print replace + "\n"
     double_char = double_char_ob.sub(r'\1',replace)
     #print double_char +'\n'
-    punctuation = punctuation_ob.sub('',double_char)
-    return punctuation
+    
+    return double_char
 
 end_file = open('end_file.txt','w')
 for i in file_in:
