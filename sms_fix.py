@@ -50,14 +50,45 @@ dictionary_sms = dic_sms.split()
 final_dict = {}
 insert = map(lambda k, v: final_dict.update({k: v}), dictionary_sms, dic_line)
 
-print final_dict
+
+
 
 #print dictionary_sms
 
+re_translate = ''
 
+for i in dictionary_sms:
+    re_translate += final_dict[i] + " "
+
+re_translated_file = open('retrans.txt','w')
+for n in re_translate:
+    re_translated_file.write(n)
 
 
 end_file.close()
+
+re_list = re_translate.split()
+
+def compare(a,b):
+    counter = 0
+    counter2 = 0
+    counter3 = 0
+    for i in a:
+        if a[counter] == b[counter]:
+            counter += 1
+            counter2 += 1
+        else:
+            counter3 += 1
+            counter += 1
+
+    print counter, counter2, counter3
+    answer = str(counter2/float(counter) * 100)+'%'
+    return answer
+print compare(dic_line,re_list),'comparison'
+
+print len(dic_line),len(re_list)
+
+
 
 elapsed = (time.clock() - start)
 print elapsed, 'seconds'
