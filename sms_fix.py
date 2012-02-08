@@ -28,6 +28,6 @@ end_file = open('n_file.txt')
 sms_text = open('sms_text.txt','w')
 for i in end_file:
      sms_text.write(sms(i))
-     #print sms(i)
+     print sms(i)
 
 end_file.close()
