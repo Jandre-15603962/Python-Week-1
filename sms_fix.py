@@ -73,7 +73,7 @@ def compare(a,b):
     counter = 0
     counter2 = 0
     counter3 = 0
-    for i in a:
+    for i in a and b:
         if a[counter] == b[counter]:
             counter += 1
             counter2 += 1
@@ -86,7 +86,7 @@ def compare(a,b):
     return answer                               # Returns % accuracy of back-translation
 print compare(dic_line,re_list),'accuracy'
 
-#print len(final_dict)
+print len(final_dict), len(dic_line),len(re_list)
 
 
 
